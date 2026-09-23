@@ -1,23 +1,89 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <title>Galeri Anggota 2</title>
-    <style>
-        body { font-family: Arial, sans-serif; background: #fafafa; margin: 0; padding: 20px; }
-        header { background: #333; color: white; padding: 15px; text-align: center; }
-        .gallery { display: flex; gap: 15px; flex-wrap: wrap; margin-top: 20px; }
-        .gallery img { width: 200px; height: 150px; object-fit: cover; border-radius: 8px; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact</title>
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+  }
+
+  /* ===== FLEXBOX ===== */
+  .contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px;
+    justify-content: center;
+  }
+
+  .contact-item {
+    background: #f1f3f5;
+    border-radius: 10px;
+    padding: 20px;
+    flex: 1 1 250px;
+    text-align: center;
+  }
+
+  /* ===== MEDIA QUERY ===== */
+  @media (max-width: 600px) {
+    .contact-container {
+      flex-direction: column;
+      padding: 15px;
+    }
+
+    .contact-item {
+      flex: 1 1 100%;
+    }
+  }
+</style>
 </head>
 <body>
-    <header>
-        <h1>Galeri Anggota 2</h1>
-    </header>
-    <div class="gallery">
-        <img src="https://via.placeholder.com/200x150" alt="Foto 1">
-        <img src="https://via.placeholder.com/200x150" alt="Foto 2">
-        <img src="https://via.placeholder.com/200x150" alt="Foto 3">
+
+<!-- ===== NAVBAR (Bootstrap) ===== -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">MyWebsite</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
     </div>
+  </div>
+</nav>
+
+<!-- ===== ISI HALAMAN ===== -->
+<div class="text-center mt-4">
+  <h1>Contact Us</h1>
+  <p>Hubungi kami melalui kontak di bawah ini.</p>
+</div>
+
+<!-- ===== FLEXBOX SECTION ===== -->
+<div class="contact-container">
+  <div class="contact-item">
+    <h3>Zidan</h3>
+    <p>Email: zidan@example.com</p>
+    <p>No. HP: 08123456789</p>
+  </div>
+  <div class="contact-item">
+    <h3>Kairos</h3>
+    <p>Email: kairos@example.com</p>
+    <p>No. HP: 08129876543</p>
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
