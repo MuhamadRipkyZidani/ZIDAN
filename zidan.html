@@ -1,29 +1,72 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <title>Profil Anggota 1</title>
-    <style>
-        body { font-family: Arial, sans-serif; background: #f0f0f0; margin: 0; padding: 20px; }
-        header { background: #0073e6; color: white; padding: 15px; text-align: center; }
-        section { background: white; padding: 20px; margin-top: 20px; border-radius: 8px; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About</title>
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+  }
+
+  /* ===== FLEXBOX ===== */
+  .about-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-text {
+    flex: 1 1 400px;
+    padding: 15px;
+  }
+
+  /* ===== MEDIA QUERY ===== */
+  @media (max-width: 600px) {
+    .about-container {
+      flex-direction: column;
+      padding: 15px;
+    }
+  }
+</style>
 </head>
 <body>
-    <header>
-        <h1>Profil Anggota 1</h1>
-    </header>
-    <section>
-        <h2>Tentang Saya</h2>
-        <p>Halo, nama saya Andi. Saya seorang mahasiswa yang tertarik dengan web development.</p>
-    </section>
-    <section>
-        <h2>Hobi</h2>
-        <ul>
-            <li>Membaca buku teknologi</li>
-            <li>Bermain futsal</li>
-            <li>Menulis blog</li>
-        </ul>
-    </section>
+
+<!-- ===== NAVBAR (Bootstrap) ===== -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">MyWebsite</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== ISI HALAMAN ===== -->
+<div class="about-container">
+  <div class="about-text">
+    <h1>Tentang Kami</h1>
+    <p>Website ini dibuat sebagai tugas untuk belajar HTML, CSS (Flexbox & Media Query), dan Bootstrap. Berisi halaman profil anggota kelompok beserta cara menghubungi kami.</p>
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
